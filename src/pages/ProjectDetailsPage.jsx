@@ -111,7 +111,7 @@ const ProjectDetailsPage = () => {
     }
 
     dispatch(deleteProject(id)); // Remove from Redux
-    navigate("/ProjectsAndTasks/");
+    navigate("/");
   };
 
   // ✅ Add a new task to Supabase

@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
       <h2 className="text-xl font-bold">{project.name}</h2>
       <p className="text-gray-600 mt-2">{project.description}</p>
       <Link
-        to={`/ProjectsAndTasks/project/${project.id}`}
+        to={`/project/${project.id}`}
         className="text-blue-500 hover:underline mt-4 inline-block"
       >
         View Project

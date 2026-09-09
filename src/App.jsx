@@ -16,7 +16,7 @@ import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 const MainContent = () => {
   const dispatch = useDispatch();
   const location = useLocation();
-  const homePage = location.pathname === "/ProjectsAndTasks/";
+  const homePage = location.pathname === "/";
 
   // Fetch initial projects from backend
   useEffect(() => {
@@ -30,9 +30,9 @@ const MainContent = () => {
       <Header />
       <main className={`flex-grow container mx-auto p-4`}>
         <Routes>
-          <Route path="/ProjectsAndTasks/" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route
-            path="/ProjectsAndTasks/project/:id"
+            path="/project/:id"
             element={<ProjectDetailsPage />}
           />
         </Routes>
@@ -45,7 +45,7 @@ const MainContent = () => {
 const App = () => {
   return (
     <Provider store={store}>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <MainContent />
       </Router>
     </Provider>

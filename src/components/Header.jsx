@@ -6,7 +6,7 @@ import { addProjectToBackend, fetchProjects } from "../redux/store";
 
 const Header = () => {
   const location = useLocation();
-  const homePage = location.pathname === "/ProjectsAndTasks/";
+  const homePage = location.pathname === "/";
   const [newProject, setNewProject] = useState({ name: "", description: "" });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch = useDispatch();
@@ -42,14 +42,14 @@ const Header = () => {
     <header className="bg-navyBlue text-white">
       <div className="container mx-auto flex justify-between items-center p-4">
         <Link
-          to="/ProjectsAndTasks/"
+          to="/"
           className="text-2xl font-bold hover:opacity-90"
         >
           Projects &amp; Tasks
         </Link>
         {!homePage && (
           <Link
-            to="/ProjectsAndTasks/"
+            to="/"
             className="px-4 py-2 bg-white text-navyBlue font-semibold rounded-xl hover:bg-gray-200"
           >
             See All Projects
