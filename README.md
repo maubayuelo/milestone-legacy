@@ -65,7 +65,7 @@ npm run dev
 ```
 
 Vite prints the local URL on start. With the current config it is
-`http://localhost:5173/ProjectsAndTasks/` (the base path is set in
+`http://localhost:5173/milestone-legacy/` (the base path is set in
 `vite.config.js`). If port 5173 is in use, Vite picks the next free port and
 prints that instead.
 
